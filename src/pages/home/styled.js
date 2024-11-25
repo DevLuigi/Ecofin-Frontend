@@ -6,8 +6,6 @@ const Container = styled.div`
 
    background-color: #FFF3F3;
 
-   font-family: sans-serif;
-
    section {
       display: flex;
       flex-direction: row;
