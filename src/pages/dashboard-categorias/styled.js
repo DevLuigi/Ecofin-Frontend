@@ -7,6 +7,29 @@ const Container = styled.div`
    background-color: #FFF3F3;
 
    font-family: sans-serif;
+
+   .buttons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .buttons Button {
+      border-bottom: 2px solid #D9D9D9;
+   }
+
+   .createCategoryButton {
+      display: flex;
+      justify-content: end;
+      
+      margin-right: 4dvw;
+   }
+
+   .categoryList {
+      display: flex;
+      flex-direction: column;
+   }
 `;
 
 export { Container };
