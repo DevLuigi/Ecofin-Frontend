@@ -13,6 +13,10 @@ const Container = styled.div`
         width: ${(props) => `${props?.style?.myImageSize}dvw`};
         margin-right: .5em;
     }
+
+    p {
+        font-weight: bold;
+    }
 `
 
 export { Container }

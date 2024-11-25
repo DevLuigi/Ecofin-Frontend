@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import Cookies from 'js-cookie';
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import AuthBox from "../../components/auth-box";
 import Button  from "../../components/button";
@@ -37,7 +37,9 @@ export default function Login() {
 
     return(
         <Container>
-            <img src="/assets/images/icon_logo.svg" alt="logo-image"/>
+            <Link to={"/"}>
+                <img src="/assets/images/icon_logo.svg" alt="logo-image"/>
+            </Link>
             <AuthBox myWidth={40} myHeight={60}>
                 <h3> Acesse sua conta </h3>
                 <hr />
@@ -70,7 +72,7 @@ export default function Login() {
                     </Button>
                 </div>
             </AuthBox>
-            <p> Ainda não possuí uma conta? <span> Faça seu cadastro! </span> </p>
+            <p> Ainda não possuí uma conta? <Link to="/register"> <span> Faça seu cadastro! </span> </Link> </p>
         </Container>
     )
 }

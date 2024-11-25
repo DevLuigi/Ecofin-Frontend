@@ -18,6 +18,7 @@ export default function Header() {
                     Login 
                 </Button>
                 <Button
+                    myRoute={"/register"}
                     myHeight={6}
                     myWidth={12}
                     myBackgroundColor={"#FFB2B2"}

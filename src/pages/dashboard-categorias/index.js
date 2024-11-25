@@ -1,4 +1,3 @@
-import Button from "../../components/button";
 import Conteudo from "../../components/conteudo-principal";
 import HeaderDashboard from "../../components/header-dashboard";
 
