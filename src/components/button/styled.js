@@ -41,7 +41,7 @@ const Container = styled.button`
     &:hover {
         transition: .5s;
         background-color: ${(props) => props?.style?.myBackgroundColor && darken(0.1, props?.style?.myBackgroundColor)};
-        color: ${(props) => lighten(0.1, props?.style?.myColor)};
+        color: ${(props) => props?.style?.myColor && lighten(0.1, props?.style?.myColor)};
     }
 `;
 

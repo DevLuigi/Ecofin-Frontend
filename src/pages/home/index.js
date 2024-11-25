@@ -1,14 +1,13 @@
-import Button from "../../components/button";
-import Header from "../../components/header-home";
+import Button    from "../../components/button";
+import Header    from "../../components/header-home";
 import IconeText from "../../components/icones-home";
 
-import { Container } from "./styled";
+import {Container}  from "./styled";
 
 export default function Home() {
     return(
         <Container>
             <Header />
-            
             <section>
                 <div className="infos-div">
                     <h1> Controle financeiro pessoal com toda a <span className="highlight">praticidade</span> que a planilha não te oferece </h1>
@@ -17,12 +16,12 @@ export default function Home() {
                         prática e segura. Tenha o controle de finanças que você sempre quis!
                     </p>
                     <Button
+                        myRoute={"/login"}
                         myHeight={6}
                         myWidth={18}
                         myBackgroundColor={"#FFB2B2"}
                         myColor={"#ffff"}
                         myImagePath={"/assets/images/seta_direita_branca.png"}
-                        myMethod={() => alert("button 3")}
                     > 
                         Iniciar gratuitamente 
                     </Button>
