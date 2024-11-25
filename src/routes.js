@@ -2,7 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from './pages/home';
 import Login from './pages/login';
-import Categorias from "./pages/dashboard-categorias";
+import Register from "./pages/register";
+import Category from "./pages/dashboard-categorias";
 
 export default function RoutesProject() {
     return (
@@ -10,7 +11,8 @@ export default function RoutesProject() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />}/>
-                <Route path="/categorias" element={<Categorias />}></Route>
+                <Route path="/register" element={<Register />}></Route>
+                <Route path="/category" element={<Category />}></Route>
             </Routes>
         </BrowserRouter>
     )

@@ -31,6 +31,10 @@ const Container = styled.div`
       margin: .5em 0em;
    }
 
+   p {
+      font-weight: bold;
+   }
+
    .highlight {
       color: #FFB2B2;
    }

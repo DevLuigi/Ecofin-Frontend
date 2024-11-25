@@ -16,9 +16,9 @@ export default function Home() {
                         prática e segura. Tenha o controle de finanças que você sempre quis!
                     </p>
                     <Button
-                        myRoute={"/login"}
+                        myRoute={"/register"}
                         myHeight={6}
-                        myWidth={18}
+                        myWidth={19}
                         myBackgroundColor={"#FFB2B2"}
                         myColor={"#ffff"}
                         myImagePath={"/assets/images/seta_direita_branca.png"}
