@@ -1,5 +1,6 @@
 import { Container } from "./styled";
 import Button from "../button";
+import { Link } from "react-router-dom";
 
 export default function HeaderDashboard() {
     return(
@@ -50,8 +51,6 @@ export default function HeaderDashboard() {
                 <img src="/assets/images/engrenagem.png" alt="img-config"/>
                 <img src="/assets/images/usuario-de-perfil.png" alt="img-perfil"/>   
             </div>
-
-            
         </Container>
     )
 
