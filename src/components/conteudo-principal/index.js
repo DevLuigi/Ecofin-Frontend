@@ -3,16 +3,16 @@ import { Container } from "./styled";
 export default function Conteudo(props) {
     return(
         <Container style={props}>
-            <div id="background">
+            <div className="background">
 
-                <div id="titulo">
+                <div className="title">
                     <h2>{props.myTitle}</h2>
                 </div>
 
-                <div id="divisaoConteudo"><span></span></div>
+                <div className="contentDivision"><span></span></div>
 
-                <div id="conteudo">
-                    <span>{props?.children}</span>
+                <div className="content">
+                    <div>{props?.children}</div>
                 </div>
             </div>
         </Container>

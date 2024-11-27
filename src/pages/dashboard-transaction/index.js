@@ -1,3 +1,4 @@
+import Button from "../../components/button";
 import Conteudo from "../../components/conteudo-principal";
 import HeaderDashboard from "../../components/header-dashboard";
 
@@ -7,7 +8,7 @@ export default function Transaction() {
     return(
         <Container>
             <HeaderDashboard />
-            
+
             <Conteudo myTitle={"Lançamento"}>
                 
             </Conteudo>

@@ -6,7 +6,7 @@ const Container = styled.header`
         align-items: center;
         justify-content: center;
 
-    #background {
+    .background {
         background-color: #FEF9F2;
         border: 2px solid #777777;
         border-radius: 10px;
@@ -21,14 +21,14 @@ const Container = styled.header`
         margin-left: 3dvw;
     }
 
-    #titulo {
+    .title {
         width: 30%;
 
         margin-left: 1dvw;
         margin-top: 1dvw;
     }
 
-    #divisaoConteudo {
+    .contentDivision {
         width: 90%;
 
         margin-left: 1dvw;
@@ -38,11 +38,10 @@ const Container = styled.header`
         color: transparent; /*Encontrar uma forma melhor para dividir o titulo do conteudo*/
     }
 
-    #conteudo {
+    .content {
         margin-top: 1dvw;
         margin-left: 1dvw;
 
-        overflow: auto;
     }
 
 
