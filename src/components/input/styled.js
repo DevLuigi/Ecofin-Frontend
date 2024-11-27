@@ -24,6 +24,18 @@ const Container = styled.div`
         border: 1px solid rgba(0, 0, 0, 0.3);
         border-radius: .5em;
     }
+
+    /* Para navegadores modernos (Chrome, Edge, Opera, etc.) */
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none; /* Remove o spinner */
+        margin: 0; /* Garante que não haja margem extra */
+    }
+
+    /* Para Firefox */
+    input[type="number"] {
+        -moz-appearance: textfield; /* Remove o spinner no Firefox */
+    }
 `
 
 export { Container };

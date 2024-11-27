@@ -5,8 +5,13 @@ export default class AuthApi extends ServiceBase {
         super('/users');
     }
 
-    async login(email, password){
-        let response = await super.post('/login', { email, password });
+    async login(body){
+        let response = await super.post('/login', body);
+        return response;
+    }
+
+    async register(body) {
+        let response = await super.post('', body);
         return response;
     }
 }
