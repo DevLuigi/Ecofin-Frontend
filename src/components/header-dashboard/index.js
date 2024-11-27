@@ -5,51 +5,58 @@ import { Link } from "react-router-dom";
 export default function HeaderDashboard() {
     return(
         <Container>
-            <img src="/assets/images/icon_logo.svg" alt="img-header"/>
+            <Link to="/overview">
+                <img src="/assets/images/Logo_EcoFin.png" alt="img-header"/>
+            </Link>
+            
             <div>
                 <Button
+                    myRoute={"/overview"}
                     myMargin={"0em"}
                     myHeight={6}
                     myWidth={9}
                     isTransparent={true}
                     myColor={"#707070"}
-                    myMethod={() => alert("button 1")}
                 > 
                     Visão Geral 
                 </Button>
                 <Button
+                    myRoute={"/transaction"}
                     myMargin={"0em"}
                     myHeight={6}
                     myWidth={9}
                     isTransparent={true}
                     myColor={"#707070"}
-                    myMethod={() => alert("button 2")}
                 > 
                     Lançamento
                 </Button>
                 <Button
+                    myRoute={"/reports"}
                     myMargin={"0em"}
                     myHeight={6}
                     myWidth={9}
                     isTransparent={true}
                     myColor={"#707070"}
-                    myMethod={() => alert("button 3")}
                 > 
-                    Relatório
+                    Relatórios
                 </Button>
                 <Button
+                    myRoute={"/savings"}
                     myMargin={"0em"}
                     myHeight={6}
                     myWidth={9}
                     isTransparent={true}
                     myColor={"#707070"}
-                    myMethod={() => alert("button 4")}
                 > 
                     Poupança
                 </Button>
 
                 <img src="/assets/images/engrenagem.png" alt="img-config"/>
-                <img src="/assets/images/usuario-de-perfil.png" alt="img-perfil"/>   
+
+                <Link to="/user">
+                    <img src="/assets/images/usuario-de-perfil.png" alt="img-perfil"/> 
+                </Link>
+                  
             </div>
         </Container>
     )
