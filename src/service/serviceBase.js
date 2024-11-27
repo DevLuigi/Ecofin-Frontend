@@ -72,7 +72,8 @@ export default class ServiceBase {
     }
 
     handleResponse(response) {
-        return response.data || {};
+        const { data, status } = response
+        return { data, status } || {};
     }
 
 

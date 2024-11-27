@@ -21,18 +21,19 @@ export default function Login() {
 
     const login = async () => {
         if (!email || !password) { 
-            toast.warn("Preencha o e-mail e senha antes de entrar!");
+            toast.warn("Preencha o e-mail e senha antes de entrar");
             return;
         }
 
-        const response = await api.login(email, password);
+        const response = await api.login({email, password});
         if(response.status === 404) {
-            toast.warn("Crendenciais inválidas!");
+            toast.warn("Crendenciais inválidas");
             return;
         };
 
-        Cookies.set("user-logged", JSON.stringify(response), { expires: 7 });      
-        navigation("/overview");
+        Cookies.set("user-logged", JSON.stringify(response), { expires: 7 });  
+        toast.success("Login efetuado com sucesso");    
+        navigation("/");
     }
 
     return(
