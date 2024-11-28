@@ -9,6 +9,7 @@ import Reports from "./pages/dashboard-reports";
 import Savings from "./pages/dashboard-savings";
 import Category from "./pages/dashboard-category";
 import User from "./pages/user";
+import Preferences from "./pages/dashboard-preferences";
 
 export default function RoutesProject() {
     return (
@@ -23,6 +24,7 @@ export default function RoutesProject() {
                 <Route path="/savings" element={<Savings />}></Route>
                 <Route path="/category" element={<Category />}></Route>
                 <Route path="/user" element={<User />}></Route>
+                <Route path="/preferences" element={<Preferences />}></Route>
             </Routes>
         </BrowserRouter>
     )

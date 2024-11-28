@@ -33,7 +33,7 @@ export default function Login() {
 
         Cookies.set("user-logged", JSON.stringify(response), { expires: 7 });  
         toast.success("Login efetuado com sucesso");    
-        navigation("/");
+        navigation("/overview");
     }
 
     return(

@@ -151,6 +151,7 @@ export default function Register() {
                         myWidth={28}
                         myGetter={password}
                         mySetter={setPassword}
+                        myType={"password"}
                     > 
                         Seu senha 
                     </Input>
@@ -160,6 +161,7 @@ export default function Register() {
                         myWidth={28}
                         myGetter={confirmPassword}
                         mySetter={setConfirmPassword}
+                        myType={"password"}
                     > 
                         Repita sua senha 
                     </Input>
