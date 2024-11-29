@@ -2,15 +2,8 @@ import { Container } from "./styled";
 import Button from "../button";
 import { Link } from "react-router-dom";
 import PreferencesButton from "../preferences-button";
-import { useState } from "react";
 
 export default function HeaderDashboard() {
-    const [menuOpen, setMenuOpen] = useState(false);
-
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    }
-    
     return(
         <Container>
             <Link to="/overview">
