@@ -1,6 +1,7 @@
 import { Container } from "./styled";
 import Button from "../button";
 import { Link } from "react-router-dom";
+import PreferencesButton from "../preferences-button";
 
 export default function HeaderDashboard() {
     return(
@@ -51,7 +52,7 @@ export default function HeaderDashboard() {
                     Poupança
                 </Button>
 
-                <img src="/assets/images/engrenagem.png" alt="img-config"/>
+                {<PreferencesButton />}
 
                 <Link to="/user">
                     <img src="/assets/images/usuario-de-perfil.png" alt="img-perfil"/> 
