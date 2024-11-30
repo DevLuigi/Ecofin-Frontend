@@ -19,11 +19,22 @@ export default class ServiceBase {
         }
     }
 
+    getUser() {
+        let logged = Cookies.get('user-logged');
+        if (logged) {
+            let cookie = JSON.parse(logged);
+            delete cookie.token;
+            return cookie;
+        } else {
+            return {};
+        }
+    }
+
     async get(path) {
         try {
             let r = await this.api.get(path, {
                 headers: {
-                    'Authorization': `Bearer ${this.getToken()}`
+                    Authorization: this.getToken()
                 }
             });
             return this.handleResponse(r);
@@ -36,7 +47,7 @@ export default class ServiceBase {
         try {
             let r = await this.api.post(path, body, {
                 headers: {
-                    'Authorization': `Bearer ${this.getToken()}`
+                    Authorization: this.getToken()
                 }
             });
             return this.handleResponse(r);
@@ -49,7 +60,7 @@ export default class ServiceBase {
         try {
             let r = await this.api.put(path, body, {
                 headers: {
-                    'Authorization': `Bearer ${this.getToken()}`
+                    Authorization: this.getToken()
                 }
             });
             return this.handleResponse(r);
@@ -58,11 +69,11 @@ export default class ServiceBase {
         }
     }
 
-    async delete(path, body) {
+    async delete(path) {
         try {
-            let r = await this.api.delete(path, body, {
+            let r = await this.api.delete(path, {
                 headers: {
-                    'Authorization': `Bearer ${this.getToken()}`
+                    Authorization: this.getToken()
                 }
             });
             return this.handleResponse(r);

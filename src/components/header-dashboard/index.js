@@ -7,7 +7,7 @@ export default function HeaderDashboard() {
     return(
         <Container>
             <Link to="/overview">
-                <img src="/assets/images/Logo_EcoFin.png" alt="img-header"/>
+                <img className="logo-img" src="/assets/images/Logo_EcoFin.png" alt="img-header"/>
             </Link>
             
             <div>
@@ -50,15 +50,13 @@ export default function HeaderDashboard() {
                     myColor={"#707070"}
                 > 
                     Poupança
-                </Button>
-
-                {<PreferencesButton />}
-
-                <Link to="/user">
-                    <img src="/assets/images/usuario-de-perfil.png" alt="img-perfil"/> 
-                </Link>
-                  
+                </Button>          
             </div>
+            {<PreferencesButton />}
+
+            <Link to="/user">
+                <img src="/assets/images/usuario-de-perfil.png" alt="img-perfil"/> 
+            </Link>
         </Container>
     )
 
