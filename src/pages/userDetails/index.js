@@ -1,16 +1,17 @@
 import HeaderDashboard from "../../components/header-dashboard";
-import OverviewContent from "../../components/overview-content";
+import UserDetailsContent from "../../components/userDetails-content";
 
 import { Container } from "./styled";
 
-export default function Overview() {
+export default function UserDetails() {
     return(
         <Container>
             <HeaderDashboard />
-            
-            <OverviewContent>
+
+            <UserDetailsContent>
                 
-            </OverviewContent>
+            </UserDetailsContent>
+            
         </Container>
     )
 }
