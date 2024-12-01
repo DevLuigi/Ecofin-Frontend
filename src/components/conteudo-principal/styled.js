@@ -1,50 +1,32 @@
 import styled from "styled-components";
 
-const Container = styled.header`
+const Container = styled.section`
+    display: flex;
+    flex-direction: column;
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    background-color: #FEF9F2;
+    border: 2px solid rgb(0 0 0 / 5%);
+    border-radius: 10px;
 
-    .background {
-        background-color: #FEF9F2;
-        border: 2px solid #777777;
-        border-radius: 10px;
+    height: 80dvh;
+    width: 60dvw;
 
-        height: 80dvh;
-        width: 60dvw;
-
-        margin-top: 2dvw;
-    }
-    
-    img {
-        margin-left: 3dvw;
-    }
+    margin-top: 2dvw;
 
     .title {
         width: 30%;
-
-        margin-left: 1dvw;
-        margin-top: 1dvw;
+        margin: .8em .8em; 
     }
 
-    .contentDivision {
-        width: 90%;
-
-        margin-left: 1dvw;
-        
-        border-top: 2px solid #D9D9D9;
-
-        color: transparent; /*Encontrar uma forma melhor para dividir o titulo do conteudo*/
+    hr {
+        width: 100%;
+        border-top: 1px solid #D9D9D9;  
+        margin: 0px;
     }
 
     .content {
-        margin-top: 1dvw;
-        margin-left: 1dvw;
-
+        margin: .8em .8em;
     }
-
-
 `;
 
 export { Container }

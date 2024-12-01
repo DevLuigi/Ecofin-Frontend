@@ -11,8 +11,9 @@ const Container = styled.header`
     height: 10dvh;
     width: 100dvw;
 
-    img {
-        margin-left: 3dvw;
+    .logo-img {
+        height: 10dvh;
+        width: 10dvw;
     }
 
     div {
