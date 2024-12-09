@@ -8,7 +8,7 @@ export default function OverviewContent(props) {
             <div className="acessoRapido">
 
                 <div className="userReports">
-                    <h3>Olá, (nome do usuario)!</h3>
+                    <h3>Olá, {props.myName}!</h3>
 
                     <div className="reports">
                         <div>

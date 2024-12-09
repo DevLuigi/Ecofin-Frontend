@@ -32,7 +32,13 @@ export default function Overview() {
     return(
         <Container>
             <HeaderDashboard />
-            <OverviewContent>
+            
+            <OverviewContent
+                myName={serviceBase.getUsername()}
+                myIncome={serviceBase.getBalance()}
+                myExpense={0}
+            >
+
             </OverviewContent>
         </Container>
     )

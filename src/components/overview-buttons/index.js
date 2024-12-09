@@ -2,12 +2,51 @@ import { Container } from "./styled";
 import Button from "../button";
 import Input from "../input";
 import { useState } from "react";
+import { toast } from "react-toastify";
+
+import TransactionApi from "../../service/transactionApi";
+const api = new TransactionApi();
 
 export default function OverviewButtons(props) {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
+    }
+
+    const [title, setTitle] = useState('');
+    const [value, setValue] = useState('');
+    const [date, setDate] = useState('');
+    const [transactionType, setTransactionType] = useState('');
+    const [category, setCategory] = useState('');
+    const [description, setDescription] = useState('');
+
+    const isFormCompleted = Object.values(
+        [title, value, date, transactionType, category, description]
+    ).every((value) => value.trim() !== "");
+
+    const register = async () => {
+        if(!isFormCompleted) {
+            toast.warn("Preencha todos os campos");
+            return;
+        }
+
+        const response = await api.createTransaction({
+            title,
+            value: parseFloat(value),
+            date,
+            transactionType,
+            category,
+            description
+        });
+
+        if (response?.status !== 200) {
+            toast.error("Não foi possível processar sua solicitação. Verifique os dados fornecidos.");
+            return;
+        }
+
+        toast.success("Movimentação criada com sucesso!");
+        toggleMenu();
     }
       
     return (
@@ -62,8 +101,8 @@ export default function OverviewButtons(props) {
                             myMargin={"1em 0em"}
                             myHeight={9}
                             myWidth={28}
-                            myGetter={"titulo"}
-                            mySetter={"setName"}
+                            myGetter={title}
+                            mySetter={setTitle}
                         >
                             Titulo
                         </Input>
@@ -72,8 +111,9 @@ export default function OverviewButtons(props) {
                             myMargin={"1em 0em"}
                             myHeight={9}
                             myWidth={28}
-                            myGetter={"titulo"}
-                            mySetter={"setName"}
+                            myGetter={value}
+                            mySetter={setValue}
+                            myType={"number"}
                         >
                             Valor
                         </Input>
@@ -82,8 +122,9 @@ export default function OverviewButtons(props) {
                             myMargin={"1em 0em"}
                             myHeight={9}
                             myWidth={28}
-                            myGetter={"titulo"}
-                            mySetter={"setName"}
+                            myGetter={date}
+                            mySetter={setDate}
+                            myType={"date"}
                         >
                             Data
                         </Input>
@@ -92,8 +133,8 @@ export default function OverviewButtons(props) {
                             myMargin={"1em 0em"}
                             myHeight={9}
                             myWidth={28}
-                            myGetter={"titulo"}
-                            mySetter={"setName"}
+                            myGetter={transactionType}
+                            mySetter={setTransactionType}
                         >
                             Tipo da movimentação
                         </Input>
@@ -102,8 +143,8 @@ export default function OverviewButtons(props) {
                             myMargin={"1em 0em"}
                             myHeight={9}
                             myWidth={28}
-                            myGetter={"titulo"}
-                            mySetter={"setName"}
+                            myGetter={category}
+                            mySetter={setCategory}
                         >
                             Categoria
                         </Input>
@@ -112,8 +153,8 @@ export default function OverviewButtons(props) {
                             myMargin={"1em 0em"}
                             myHeight={9}
                             myWidth={28}
-                            myGetter={"titulo"}
-                            mySetter={"setName"}
+                            myGetter={description}
+                            mySetter={setDescription}
                         >
                             Descrição
                         </Input>
@@ -124,7 +165,7 @@ export default function OverviewButtons(props) {
                         myWidth={8}
                         myBackgroundColor={"#C9E9D2"}
                         myColor={"#000000"}
-                        myMethod={toggleMenu} //ajustar para verificar o form
+                        myMethod={register} //ajustar para verificar o form
                     >
                         Confirmar
                     </Button>

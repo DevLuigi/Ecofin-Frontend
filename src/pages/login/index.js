@@ -60,6 +60,7 @@ export default function Login() {
                         myMargin={"1.5em 0em"} 
                         myHeight={9} 
                         myWidth={28}
+                        myType={"password"}
                     > 
                         Sua senha 
                     </Input>
