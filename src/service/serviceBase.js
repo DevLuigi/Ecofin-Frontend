@@ -24,10 +24,21 @@ export default class ServiceBase {
         if (logged) {
             let cookie = JSON.parse(logged);
             delete cookie.token;
+            console.log(cookie)
             return cookie;
         } else {
             return {};
         }
+    }
+
+    getUsername(){
+        let user = this.getUser();
+        return user.name;
+    }
+
+    getBalance(){
+        let user = this.getUser();
+        return user.balance;
     }
 
     async get(path) {
