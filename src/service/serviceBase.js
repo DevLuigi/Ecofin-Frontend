@@ -31,16 +31,6 @@ export default class ServiceBase {
         }
     }
 
-    getUsername(){
-        let user = this.getUser();
-        return user.name;
-    }
-
-    getBalance(){
-        let user = this.getUser();
-        return user.balance;
-    }
-
     async get(path) {
         try {
             let r = await this.api.get(path, {

@@ -8,7 +8,9 @@ import OverviewContent from "../../components/overview-content";
 import { Container } from "./styled";
 
 import ServiceBase from '../../service/serviceBase'
+import UserApi from "../../service/userApi";
 const serviceBase = new ServiceBase();
+const userApi = new UserApi
 
 export default function Overview() {
 
@@ -34,8 +36,8 @@ export default function Overview() {
             <HeaderDashboard />
             
             <OverviewContent
-                myName={serviceBase.getUsername()}
-                myIncome={serviceBase.getBalance()}
+                myName={userApi.getUsername()}
+                myIncome={userApi.getBalance()}
                 myExpense={0}
             >
 
