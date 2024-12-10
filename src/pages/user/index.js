@@ -3,14 +3,17 @@ import UserContent from "../../components/user-content";
 
 import { Container } from "./styled";
 
+import UserApi from "../../service/userApi";
+const userApi = new UserApi();
+
 export default function User() {
     return(
         <Container>
             <HeaderDashboard />
 
             <UserContent
-                myName={"nome do usuario"}
-                myEmail={"email do usuario"}
+                myName={userApi.getUsername()}
+                myEmail={userApi.getUserEmail()}
             >
 
             </UserContent>
